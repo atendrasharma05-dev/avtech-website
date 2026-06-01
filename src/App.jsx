@@ -157,6 +157,144 @@ export default function App() {
           ))}
         </div>
       </section>
+      {/* Gallery Section */}
+<section
+  id="gallery"
+  style={{
+    padding: "80px 20px",
+    background: "#f8fafc",
+    textAlign: "center",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "42px",
+      color: "#08142d",
+      marginBottom: "15px",
+    }}
+  >
+    Our Recent Installations
+  </h2>
+
+  <p
+    style={{
+      color: "#666",
+      marginBottom: "40px",
+    }}
+  >
+    TV Installation, Smart Board Setup & Interactive Panel Projects
+  </p>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
+      gap: "20px",
+      maxWidth: "1200px",
+      margin: "auto",
+    }}
+  >
+    {[1,2,3,4,5,6,7,8,9,10,11,12].map((item) => (
+      <img
+        key={item}
+        src={`https://picsum.photos/500/350?random=${item}`}
+        alt="Gallery"
+        style={{
+          width: "100%",
+          height: "250px",
+          objectFit: "cover",
+          borderRadius: "15px",
+          boxShadow: "0 5px 15px rgba(0,0,0,0.15)",
+        }}
+      />
+    ))}
+  </div>
+</section>
+
+{/* About Section */}
+<section
+  style={{
+    background: "#ffffff",
+    padding: "80px 20px",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1100px",
+      margin: "auto",
+      textAlign: "center",
+    }}
+  >
+    <h2
+      style={{
+        fontSize: "42px",
+        color: "#08142d",
+        marginBottom: "25px",
+      }}
+    >
+      About AVTech Installation Services
+    </h2>
+
+    <p
+      style={{
+        fontSize: "18px",
+        lineHeight: "1.8",
+        color: "#555",
+      }}
+    >
+      AVTech Installation Services provides professional TV installation,
+      Interactive Flat Panel installation, Smart Classroom setup,
+      Conference Room AV solutions and complete audio-video deployment
+      services across India.
+    </p>
+
+    <p
+      style={{
+        fontSize: "18px",
+        lineHeight: "1.8",
+        color: "#555",
+        marginTop: "20px",
+      }}
+    >
+      We work with schools, colleges, offices, corporate meeting rooms,
+      showrooms and residential customers. Our goal is to deliver
+      professional installation with proper cable management and
+      long-term support.
+    </p>
+  </div>
+</section>
+
+{/* India Coverage */}
+<section
+  style={{
+    background: "#08142d",
+    color: "white",
+    padding: "80px 20px",
+    textAlign: "center",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "42px",
+      marginBottom: "20px",
+    }}
+  >
+    Service Available Across India
+  </h2>
+
+  <p
+    style={{
+      maxWidth: "900px",
+      margin: "auto",
+      lineHeight: "1.8",
+      color: "#d6e6ff",
+    }}
+  >
+    We provide installation services in Delhi, Noida, Gurgaon,
+    Mumbai, Pune, Bengaluru, Hyderabad, Chennai, Kolkata, Patna,
+    Begusarai and all major cities across India.
+  </p>
+</section>
     </div>
   );
 }
