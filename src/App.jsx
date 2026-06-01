@@ -29,7 +29,117 @@ export default function App() {
       </header>
 
       {/* Hero Section */}
-      <section
+      <section{/* Services Section */}
+<section
+  id="services"
+  style={{
+    padding: "80px 20px",
+    background: "#f5f7fb",
+    textAlign: "center",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "42px",
+      color: "#08142d",
+      marginBottom: "15px",
+    }}
+  >
+    Our Services
+  </h2>
+
+  <p
+    style={{
+      color: "#666",
+      marginBottom: "50px",
+      fontSize: "18px",
+    }}
+  >
+    Professional AV Installation Services Across India
+  </p>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
+      gap: "25px",
+      maxWidth: "1200px",
+      margin: "auto",
+    }}
+  >
+    {[
+      "TV Wall Mount Installation",
+      "Interactive Flat Panel Installation",
+      "Smart Classroom Setup",
+      "Projector Installation",
+      "Conference Room AV Setup",
+      "LED Display Installation",
+      "Video Conferencing Setup",
+      "Cable Management",
+    ].map((service, index) => (
+      <div
+        key={index}
+        style={{
+          background: "white",
+          padding: "30px",
+          borderRadius: "15px",
+          boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+        }}
+      >
+        <h3 style={{ color: "#0f274f" }}>{service}</h3>
+        <p style={{ color: "#666" }}>
+          Professional installation with expert support.
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
+
+{/* Why Choose Us */}
+<section
+  style={{
+    background: "#08142d",
+    color: "white",
+    padding: "80px 20px",
+    textAlign: "center",
+  }}
+>
+  <h2 style={{ fontSize: "42px", marginBottom: "20px" }}>
+    Why Choose AVTech?
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
+      gap: "20px",
+      maxWidth: "1200px",
+      margin: "40px auto 0",
+    }}
+  >
+    {[
+      "All India Service",
+      "Experienced Team",
+      "Fast Installation",
+      "Affordable Pricing",
+      "Professional Support",
+      "Clean Cable Management",
+      "School & Office Experts",
+      "Customer Satisfaction",
+    ].map((item, index) => (
+      <div
+        key={index}
+        style={{
+          background: "rgba(255,255,255,0.1)",
+          padding: "25px",
+          borderRadius: "15px",
+        }}
+      >
+        ✅ {item}
+      </div>
+    ))}
+  </div>
+</section>
         id="home"
         style={{
           background:
