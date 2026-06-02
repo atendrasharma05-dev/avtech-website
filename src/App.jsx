@@ -478,6 +478,41 @@ export default function App() {
     <p>Yes, professional cable management is included in our installation services.</p>
   </div>
 </section>
+      {/* Trusted By */}
+<section
+  style={{
+    padding: "80px 20px",
+    background: "#f5f7fb",
+    textAlign: "center",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "42px",
+      color: "#08142d",
+      marginBottom: "40px",
+    }}
+  >
+    Trusted By Schools & Corporates
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))",
+      gap: "20px",
+      maxWidth: "1200px",
+      margin: "auto",
+    }}
+  >
+    <div style={serviceCard}>🏫 Schools</div>
+    <div style={serviceCard}>🏢 Corporate Offices</div>
+    <div style={serviceCard}>🎓 Colleges</div>
+    <div style={serviceCard}>🏬 Showrooms</div>
+    <div style={serviceCard}>🏛 Government Projects</div>
+    <div style={serviceCard}>📺 Residential Clients</div>
+  </div>
+</section>
       {/* Contact Section */}
 <section
   id="contact"
