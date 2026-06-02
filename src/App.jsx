@@ -89,18 +89,34 @@ export default function App() {
       >
 <div style={{ maxWidth: "1000px" }}>
 
-  <h1
-    style={{
-      fontSize: "65px",
-      fontWeight: "bold",
-      marginBottom: "20px",
-      lineHeight: "1.2",
-    }}
-  >
-    Professional TV & Interactive Flat Panel Installation
-  </h1>
+<h1
+  style={{
+    fontSize: "65px",
+    fontWeight: "800",
+    marginBottom: "20px",
+    lineHeight: "1.2",
+    background: "linear-gradient(90deg,#ffffff,#4da6ff)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  }}
+>
+  Professional TV & Interactive Flat Panel Installation
+</h1>
 
   <p
+    <div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    gap: "20px",
+    flexWrap: "wrap",
+    marginTop: "30px",
+  }}
+>
+  <span>✅ All India Service</span>
+  <span>✅ Certified Technicians</span>
+  <span>✅ Fast Installation</span>
+</div>
     style={{
       fontSize: "22px",
       lineHeight: "1.8",
