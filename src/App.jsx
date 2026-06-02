@@ -169,8 +169,23 @@ export default function App() {
         >
           {services.map((service, index) => (
             <div key={index} style={serviceCard}>
-              <h3>{service}</h3>
-              <p>Professional installation with expert support.</p>
+              <h3
+  style={{
+    color: "#08142d",
+    fontSize: "22px",
+    marginBottom: "15px",
+  }}
+>
+  {service}
+</h3>
+              <p
+  style={{
+    color: "#666",
+    lineHeight: "1.7",
+  }}
+>
+  Professional installation with expert support and proper cable management.
+</p>
             </div>
           ))}
         </div>
@@ -504,10 +519,12 @@ const whatsappBtn = {
   boxShadow: "0 5px 15px rgba(0,0,0,0.2)",
 };
 const serviceCard = {
-  background: "white",
-  padding: "30px",
-  borderRadius: "15px",
-  boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+  background: "#ffffff",
+  padding: "35px",
+  borderRadius: "20px",
+  boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
+  transition: "0.3s",
+  border: "1px solid #eef2f7",
 };
 
 const featureCard = {
