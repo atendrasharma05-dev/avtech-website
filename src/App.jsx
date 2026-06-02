@@ -358,6 +358,52 @@ export default function App() {
     Begusarai and all major cities across India.
   </p>
 </section>
+      {/* Customer Reviews */}
+<section
+  style={{
+    padding: "80px 20px",
+    background: "#ffffff",
+    textAlign: "center",
+  }}
+>
+  <h2
+    style={{
+      fontSize: "42px",
+      color: "#08142d",
+      marginBottom: "40px",
+    }}
+  >
+    What Our Clients Say
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
+      gap: "25px",
+      maxWidth: "1200px",
+      margin: "auto",
+    }}
+  >
+    <div style={serviceCard}>
+      ⭐⭐⭐⭐⭐
+      <p>"Excellent TV installation service. Very professional team."</p>
+      <strong>- School Project, Delhi</strong>
+    </div>
+
+    <div style={serviceCard}>
+      ⭐⭐⭐⭐⭐
+      <p>"Interactive panel installation completed perfectly."</p>
+      <strong>- Corporate Office, Noida</strong>
+    </div>
+
+    <div style={serviceCard}>
+      ⭐⭐⭐⭐⭐
+      <p>"Fast installation and proper cable management."</p>
+      <strong>- Client, Bengaluru</strong>
+    </div>
+  </div>
+</section>
       {/* Contact Section */}
 <section
   id="contact"
