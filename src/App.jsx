@@ -37,9 +37,32 @@ export default function App() {
           top: 0,
         }}
       >
-        <h2 style={{ color: "#4da6ff", margin: 0 }}>
-          AVTech Installation Services
-        </h2>
+<div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "12px",
+  }}
+>
+  <img
+    src="/ChatGPT Image May 28, 2026, 03_52_48 PM.png"
+    alt="AVTech Logo"
+    style={{
+      width: "60px",
+      height: "60px",
+      objectFit: "contain",
+    }}
+  />
+
+  <h2
+    style={{
+      color: "#4da6ff",
+      margin: 0,
+    }}
+  >
+    AVTech Installation Services
+  </h2>
+</div>
 
         <nav>
           <a href="#home" style={navLink}>Home</a>
