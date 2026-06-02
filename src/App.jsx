@@ -491,6 +491,18 @@ export default function App() {
       <h3>🌍 Service Available Across India</h3>
     </div>
   </div>
+  <iframe
+  title="AVTech Location"
+  src="https://www.google.com/maps?q=Delhi,India&output=embed"
+  width="100%"
+  height="350"
+  style={{
+    border: "0",
+    borderRadius: "15px",
+    marginTop: "30px",
+  }}
+  loading="lazy"
+></iframe>
 </section>
 
 {/* Footer */}
