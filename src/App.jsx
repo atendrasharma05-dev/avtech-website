@@ -104,7 +104,17 @@ export default function App() {
 </h1>
 
   <p
-    <div
+  style={{
+    fontSize: "22px",
+    lineHeight: "1.8",
+    color: "#d6e6ff",
+  }}
+>
+  AVTech Installation Services provides professional TV wall
+  mounting, smart classroom setup and AV solutions across India.
+</p>
+
+<div
   style={{
     display: "flex",
     justifyContent: "center",
