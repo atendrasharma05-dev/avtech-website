@@ -88,11 +88,33 @@ export default function App() {
         }}
       >
         <div style={{ maxWidth: "1000px" }}>
-          <h1 style={{ fontSize: "55px" }}>
-            Professional TV & Interactive Flat Panel Installation
-          </h1>
+<h1
+  style={{
+    fontSize: "65px",
+    fontWeight: "bold",
+    marginBottom: "20px",
+    lineHeight: "1.2",
+  }}
+>
+  Professional AV Installation
+  <br />
+  Services Across India
+</h1>
 
           <p
+  style={{
+    fontSize: "22px",
+    lineHeight: "1.8",
+    color: "#d6e6ff",
+    maxWidth: "900px",
+    margin: "auto",
+  }}
+>
+  TV Wall Mount Installation, Interactive Flat Panel Setup,
+  Smart Classroom Solutions, Projector Installation,
+  Conference Room AV Setup and Complete Audio Visual Services
+  for Schools, Colleges, Offices and Corporate Clients.
+</p>
             style={{
               fontSize: "22px",
               lineHeight: "1.8",
