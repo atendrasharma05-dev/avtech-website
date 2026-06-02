@@ -1,3 +1,9 @@
+import React, { useEffect } from "react";
+
+export default function App() {
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = "smooth";
+  }, []);
 export default function App() {
   const services = [
     "TV Wall Mount Installation",
@@ -623,7 +629,9 @@ export default function App() {
     padding: "30px",
   }}
 >
-  <h3>AVTech Installation Services</h3>
+  <p>📞 +91 8532066293</p>
+<p>📧 installationavtech@gmail.com</p>
+<p>📍 Serving Clients Across India</p>
   <p>
     Professional TV & Interactive Flat Panel Installation Across India
   </p>
@@ -634,6 +642,23 @@ export default function App() {
 </footer>
 
 {/* Floating WhatsApp */}
+      <a
+  href="tel:+918532066293"
+  style={{
+    position: "fixed",
+    bottom: "90px",
+    right: "20px",
+    background: "#08142d",
+    color: "white",
+    padding: "15px 20px",
+    borderRadius: "50px",
+    textDecoration: "none",
+    fontWeight: "bold",
+    boxShadow: "0 5px 15px rgba(0,0,0,0.3)",
+  }}
+>
+  📞 Call
+</a>
 <a
   href="https://wa.me/918532066293"
   target="_blank"
