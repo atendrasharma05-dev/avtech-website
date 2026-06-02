@@ -87,60 +87,46 @@ export default function App() {
           padding: "60px 20px",
         }}
       >
-        <div style={{ maxWidth: "1000px" }}>
-<h1
-  style={{
-    fontSize: "65px",
-    fontWeight: "bold",
-    marginBottom: "20px",
-    lineHeight: "1.2",
-  }}
->
-  Professional AV Installation
-  <br />
-  Services Across India
-</h1>
+<div style={{ maxWidth: "1000px" }}>
 
-          <p
-  style={{
-    fontSize: "22px",
-    lineHeight: "1.8",
-    color: "#d6e6ff",
-    maxWidth: "900px",
-    margin: "auto",
-  }}
->
-  TV Wall Mount Installation, Interactive Flat Panel Setup,
-  Smart Classroom Solutions, Projector Installation,
-  Conference Room AV Setup and Complete Audio Visual Services
-  for Schools, Colleges, Offices and Corporate Clients.
-</p>
-            style={{
-              fontSize: "22px",
-              lineHeight: "1.8",
-              color: "#d6e6ff",
-            }}
-          >
-            AVTech Installation Services provides professional TV wall
-            mounting, smart classroom setup and AV solutions across India.
-          </p>
+  <h1
+    style={{
+      fontSize: "65px",
+      fontWeight: "bold",
+      marginBottom: "20px",
+      lineHeight: "1.2",
+    }}
+  >
+    Professional TV & Interactive Flat Panel Installation
+  </h1>
 
-          <div style={{ marginTop: "30px" }}>
-            <a href="tel:+918532066293" style={callBtn}>
-              📞 Call Now
-            </a>
+  <p
+    style={{
+      fontSize: "22px",
+      lineHeight: "1.8",
+      color: "#d6e6ff",
+    }}
+  >
+    AVTech Installation Services provides professional TV wall
+    mounting, smart classroom setup and AV solutions across India.
+  </p>
 
-            <a
-              href="https://wa.me/918532066293"
-              target="_blank"
-              rel="noreferrer"
-              style={whatsappBtn}
-            >
-              💬 WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
+  <div style={{ marginTop: "30px" }}>
+    <a href="tel:+918532066293" style={callBtn}>
+      📞 Call Now
+    </a>
+
+    <a
+      href="https://wa.me/918532066293"
+      target="_blank"
+      rel="noreferrer"
+      style={whatsappBtn}
+    >
+      💬 WhatsApp
+    </a>
+  </div>
+
+</div>
 
       {/* Services */}
       <section
