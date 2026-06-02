@@ -443,6 +443,41 @@ export default function App() {
     </div>
   </div>
 </section>
+      {/* FAQ Section */}
+<section
+  style={{
+    padding: "80px 20px",
+    background: "#ffffff",
+    maxWidth: "1000px",
+    margin: "auto",
+  }}
+>
+  <h2
+    style={{
+      textAlign: "center",
+      fontSize: "42px",
+      color: "#08142d",
+      marginBottom: "40px",
+    }}
+  >
+    Frequently Asked Questions
+  </h2>
+
+  <div style={serviceCard}>
+    <h3>Do you provide service across India?</h3>
+    <p>Yes, we provide installation services in major cities across India.</p>
+  </div>
+
+  <div style={{ ...serviceCard, marginTop: "20px" }}>
+    <h3>Do you install Interactive Flat Panels?</h3>
+    <p>Yes, we install Interactive Flat Panels, Smart Boards and AV systems.</p>
+  </div>
+
+  <div style={{ ...serviceCard, marginTop: "20px" }}>
+    <h3>Do you provide cable management?</h3>
+    <p>Yes, professional cable management is included in our installation services.</p>
+  </div>
+</section>
       {/* Contact Section */}
 <section
   id="contact"
