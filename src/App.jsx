@@ -483,24 +483,26 @@ const navLink = {
 };
 
 const callBtn = {
-  background: "#fff",
-  color: "#000",
-  padding: "15px 30px",
-  borderRadius: "10px",
+  background: "#ffffff",
+  color: "#08142d",
+  padding: "15px 35px",
+  borderRadius: "50px",
   textDecoration: "none",
-  marginRight: "15px",
   fontWeight: "bold",
+  fontSize: "18px",
+  boxShadow: "0 5px 15px rgba(0,0,0,0.2)",
 };
 
 const whatsappBtn = {
   background: "#25D366",
   color: "#fff",
-  padding: "15px 30px",
-  borderRadius: "10px",
+  padding: "15px 35px",
+  borderRadius: "50px",
   textDecoration: "none",
   fontWeight: "bold",
+  fontSize: "18px",
+  boxShadow: "0 5px 15px rgba(0,0,0,0.2)",
 };
-
 const serviceCard = {
   background: "white",
   padding: "30px",
