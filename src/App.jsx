@@ -127,15 +127,6 @@ export default function App() {
   <span>✅ Certified Technicians</span>
   <span>✅ Fast Installation</span>
 </div>
-    style={{
-      fontSize: "22px",
-      lineHeight: "1.8",
-      color: "#d6e6ff",
-    }}
-  >
-    AVTech Installation Services provides professional TV wall
-    mounting, smart classroom setup and AV solutions across India.
-  </p>
 
   <div style={{ marginTop: "30px" }}>
     <a href="tel:+918532066293" style={callBtn}>
