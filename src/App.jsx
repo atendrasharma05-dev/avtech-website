@@ -358,6 +358,45 @@ export default function App() {
     Begusarai and all major cities across India.
   </p>
 </section>
+      {/* Company Stats */}
+<section
+  style={{
+    background: "#0f274f",
+    color: "white",
+    padding: "70px 20px",
+    textAlign: "center",
+  }}
+>
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
+      gap: "25px",
+      maxWidth: "1200px",
+      margin: "auto",
+    }}
+  >
+    <div>
+      <h2 style={{ fontSize: "50px", margin: 0 }}>500+</h2>
+      <p>Projects Completed</p>
+    </div>
+
+    <div>
+      <h2 style={{ fontSize: "50px", margin: 0 }}>50+</h2>
+      <p>Cities Covered</p>
+    </div>
+
+    <div>
+      <h2 style={{ fontSize: "50px", margin: 0 }}>100+</h2>
+      <p>Corporate Clients</p>
+    </div>
+
+    <div>
+      <h2 style={{ fontSize: "50px", margin: 0 }}>24x7</h2>
+      <p>Support Available</p>
+    </div>
+  </div>
+</section>
       {/* Customer Reviews */}
 <section
   style={{
