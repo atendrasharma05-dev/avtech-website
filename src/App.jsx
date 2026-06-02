@@ -295,6 +295,134 @@ export default function App() {
     Begusarai and all major cities across India.
   </p>
 </section>
+      {/* Contact Section */}
+<section
+  id="contact"
+  style={{
+    padding: "80px 20px",
+    background: "#f5f7fb",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1200px",
+      margin: "auto",
+      textAlign: "center",
+    }}
+  >
+    <h2
+      style={{
+        fontSize: "42px",
+        color: "#08142d",
+        marginBottom: "20px",
+      }}
+    >
+      Contact Us
+    </h2>
+
+    <p
+      style={{
+        color: "#666",
+        marginBottom: "40px",
+      }}
+    >
+      Get in touch for TV Installation, Smart Board Setup and AV Solutions.
+    </p>
+
+    <div
+      style={{
+        maxWidth: "700px",
+        margin: "auto",
+        display: "grid",
+        gap: "15px",
+      }}
+    >
+      <input
+        type="text"
+        placeholder="Your Name"
+        style={inputStyle}
+      />
+
+      <input
+        type="tel"
+        placeholder="Phone Number"
+        style={inputStyle}
+      />
+
+      <input
+        type="email"
+        placeholder="Email Address"
+        style={inputStyle}
+      />
+
+      <textarea
+        placeholder="Your Requirement"
+        rows="5"
+        style={inputStyle}
+      ></textarea>
+
+      <button
+        style={{
+          background: "#08142d",
+          color: "white",
+          border: "none",
+          padding: "15px",
+          borderRadius: "10px",
+          fontSize: "18px",
+          cursor: "pointer",
+        }}
+      >
+        Submit Inquiry
+      </button>
+    </div>
+
+    <div style={{ marginTop: "40px" }}>
+      <h3>📞 8532066293</h3>
+      <h3>📧 installationavtech@gmail.com</h3>
+      <h3>🌍 Service Available Across India</h3>
+    </div>
+  </div>
+</section>
+
+{/* Footer */}
+<footer
+  style={{
+    background: "#08142d",
+    color: "white",
+    textAlign: "center",
+    padding: "30px",
+  }}
+>
+  <h3>AVTech Installation Services</h3>
+  <p>
+    Professional TV & Interactive Flat Panel Installation Across India
+  </p>
+
+  <p style={{ marginTop: "15px", color: "#ccc" }}>
+    © 2026 AVTech Installation Services. All Rights Reserved.
+  </p>
+</footer>
+
+{/* Floating WhatsApp */}
+<a
+  href="https://wa.me/918532066293"
+  target="_blank"
+  rel="noreferrer"
+  style={{
+    position: "fixed",
+    bottom: "20px",
+    right: "20px",
+    background: "#25D366",
+    color: "white",
+    padding: "15px 20px",
+    borderRadius: "50px",
+    textDecoration: "none",
+    fontWeight: "bold",
+    boxShadow: "0 5px 15px rgba(0,0,0,0.3)",
+  }}
+>
+  WhatsApp
+</a>
     </div>
   );
 }
@@ -336,4 +464,10 @@ const featureCard = {
   background: "rgba(255,255,255,0.1)",
   padding: "25px",
   borderRadius: "15px",
+};
+const inputStyle = {
+  padding: "15px",
+  borderRadius: "10px",
+  border: "1px solid #ccc",
+  fontSize: "16px",
 };
