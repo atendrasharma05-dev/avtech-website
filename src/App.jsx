@@ -127,7 +127,7 @@ export default function App() {
   </div>
 
 </div>
-
+</section>
       {/* Services */}
       <section
         id="services"
