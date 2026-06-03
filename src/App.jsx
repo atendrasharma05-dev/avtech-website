@@ -189,22 +189,33 @@ export default function App() {
       "0 10px 25px rgba(0,0,0,0.08)";
   }}
 >
-              <h3
-  style={{
-    color: "#08142d",
-    fontSize: "22px",
-    marginBottom: "15px",
-  }}
->
-  {service}
-</h3>
-              <p
+<>
+  <div
+    style={{
+      fontSize: "40px",
+      marginBottom: "15px",
+    }}
+  >
+    🔧
+  </div>
+
+  <h3
+    style={{
+      color: "#08142d",
+      fontSize: "22px",
+      marginBottom: "15px",
+    }}
+  >
+    {service}
+  </h3>
+</>
+<p
   style={{
     color: "#666",
     lineHeight: "1.7",
   }}
 >
-  Professional installation with expert support and proper cable management.
+  Professional installation, expert technicians, quality support and proper cable management.
 </p>
             </div>
           ))}
