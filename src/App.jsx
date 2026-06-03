@@ -175,7 +175,20 @@ export default function App() {
           }}
         >
           {services.map((service, index) => (
-            <div key={index} style={serviceCard}>
+<div
+  key={index}
+  style={serviceCard}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "translateY(-10px)";
+    e.currentTarget.style.boxShadow =
+      "0 20px 40px rgba(0,0,0,0.15)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "translateY(0)";
+    e.currentTarget.style.boxShadow =
+      "0 10px 25px rgba(0,0,0,0.08)";
+  }}
+>
               <h3
   style={{
     color: "#08142d",
@@ -716,8 +729,8 @@ const serviceCard = {
   padding: "35px",
   borderRadius: "20px",
   boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
-  transition: "0.3s",
   border: "1px solid #eef2f7",
+  cursor: "pointer",
 };
 
 const featureCard = {
