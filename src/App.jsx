@@ -26,27 +26,7 @@ export default function App() {
     "School & Office Experts",
     "Customer Satisfaction",
   ];
-  const services = [
-    "TV Wall Mount Installation",
-    "Interactive Flat Panel Installation",
-    "Smart Classroom Setup",
-    "Projector Installation",
-    "Conference Room AV Setup",
-    "LED Display Installation",
-    "Video Conferencing Setup",
-    "Cable Management",
-  ];
 
-  const features = [
-    "All India Service",
-    "Experienced Team",
-    "Fast Installation",
-    "Affordable Pricing",
-    "Professional Support",
-    "Clean Cable Management",
-    "School & Office Experts",
-    "Customer Satisfaction",
-  ];
 
   return (
     <div style={{ fontFamily: "Arial, sans-serif" }}>
