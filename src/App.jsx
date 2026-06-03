@@ -136,12 +136,27 @@ export default function App() {
 </div>
 
   <div style={{ marginTop: "30px" }}>
-    <a href="tel:+918532066293" style={callBtn}>
+<a
+  href="tel:+918532066293"
+  style={callBtn}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "scale(1.08)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "scale(1)";
+  }}
+>
       📞 Call Now
     </a>
 
-    <a
-      href="https://wa.me/918532066293"
+<a
+  href="https://wa.me/918532066293"
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "scale(1.08)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "scale(1)";
+  }}
       target="_blank"
       rel="noreferrer"
       style={whatsappBtn}
@@ -748,6 +763,8 @@ const callBtn = {
   fontWeight: "bold",
   fontSize: "18px",
   boxShadow: "0 5px 15px rgba(0,0,0,0.2)",
+  transition: "0.3s",
+display: "inline-block",
 };
 
 const whatsappBtn = {
@@ -759,6 +776,8 @@ const whatsappBtn = {
   fontWeight: "bold",
   fontSize: "18px",
   boxShadow: "0 5px 15px rgba(0,0,0,0.2)",
+  transition: "0.3s",
+display: "inline-block",
 };
 const serviceCard = {
   background: "#ffffff",
