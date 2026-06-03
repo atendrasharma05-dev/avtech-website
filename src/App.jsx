@@ -649,6 +649,31 @@ export default function App() {
   <p>
     Professional TV & Interactive Flat Panel Installation Across India
   </p>
+  <div
+  style={{
+    marginTop: "20px",
+    display: "flex",
+    justifyContent: "center",
+    gap: "20px",
+    flexWrap: "wrap",
+  }}
+>
+  <a href="#home" style={{ color: "#4da6ff", textDecoration: "none" }}>
+    Home
+  </a>
+
+  <a href="#services" style={{ color: "#4da6ff", textDecoration: "none" }}>
+    Services
+  </a>
+
+  <a href="#gallery" style={{ color: "#4da6ff", textDecoration: "none" }}>
+    Gallery
+  </a>
+
+  <a href="#contact" style={{ color: "#4da6ff", textDecoration: "none" }}>
+    Contact
+  </a>
+</div>
 
   <p style={{ marginTop: "15px", color: "#ccc" }}>
     © 2026 AVTech Installation Services. All Rights Reserved.
