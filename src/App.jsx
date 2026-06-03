@@ -34,7 +34,8 @@ export default function App() {
       {/* Navbar */}
       <header
         style={{
-          background: "#08142d",
+    background: "rgba(8,20,45,0.85)",
+backdropFilter: "blur(10px)",
           color: "white",
           padding: "15px 40px",
           display: "flex",
@@ -49,6 +50,7 @@ export default function App() {
     display: "flex",
     alignItems: "center",
     gap: "12px",
+    textShadow: "0 0 20px rgba(77,166,255,0.5)",
   }}
 >
   <img
@@ -58,15 +60,18 @@ export default function App() {
       width: "60px",
       height: "60px",
       objectFit: "contain",
+      transition: "0.4s",
+cursor: "pointer",
     }}
   />
 
-  <h2
-    style={{
-      color: "#4da6ff",
-      margin: 0,
-    }}
-  >
+<h2
+  style={{
+    color: "#4da6ff",
+    margin: 0,
+    textShadow: "0 0 15px rgba(77,166,255,0.8)",
+  }}
+>
     AVTech Installation Services
   </h2>
 </div>
