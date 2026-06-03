@@ -4,7 +4,28 @@ export default function App() {
   useEffect(() => {
     document.documentElement.style.scrollBehavior = "smooth";
   }, []);
-export default function App() {
+
+  const services = [
+    "TV Wall Mount Installation",
+    "Interactive Flat Panel Installation",
+    "Smart Classroom Setup",
+    "Projector Installation",
+    "Conference Room AV Setup",
+    "LED Display Installation",
+    "Video Conferencing Setup",
+    "Cable Management",
+  ];
+
+  const features = [
+    "All India Service",
+    "Experienced Team",
+    "Fast Installation",
+    "Affordable Pricing",
+    "Professional Support",
+    "Clean Cable Management",
+    "School & Office Experts",
+    "Customer Satisfaction",
+  ];
   const services = [
     "TV Wall Mount Installation",
     "Interactive Flat Panel Installation",
