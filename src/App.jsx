@@ -91,6 +91,8 @@ cursor: "pointer",
           background:
             "linear-gradient(135deg,#08142d,#0f274f,#1f4e8c)",
           color: "white",
+          position: "relative",
+overflow: "hidden",
           minHeight: "80vh",
           display: "flex",
           alignItems: "center",
@@ -99,6 +101,31 @@ cursor: "pointer",
           padding: "60px 20px",
         }}
       >
+        <div
+  style={{
+    position: "absolute",
+    width: "300px",
+    height: "300px",
+    background: "rgba(77,166,255,0.25)",
+    borderRadius: "50%",
+    filter: "blur(80px)",
+    top: "100px",
+    left: "10%",
+  }}
+></div>
+
+<div
+  style={{
+    position: "absolute",
+    width: "250px",
+    height: "250px",
+    background: "rgba(37,211,102,0.20)",
+    borderRadius: "50%",
+    filter: "blur(80px)",
+    bottom: "50px",
+    right: "10%",
+  }}
+></div>
 <div style={{ maxWidth: "1000px" }}>
 
 <h1
