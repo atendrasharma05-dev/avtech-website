@@ -1,5 +1,18 @@
 import React, { useEffect } from "react";
-
+const galleryImages = [
+  "/gallery/1.jpg",
+  "/gallery/2.jpg",
+  "/gallery/3.jpg",
+  "/gallery/4.jpg",
+  "/gallery/5.jpg",
+  "/gallery/6.jpg",
+  "/gallery/7.jpg",
+  "/gallery/8.jpg",
+  "/gallery/9.jpg",
+  "/gallery/10.jpg",
+  "/gallery/11.jpg",
+  "/gallery/12.jpg",
+];
 export default function App() {
   useEffect(() => {
     document.documentElement.style.scrollBehavior = "smooth";
@@ -335,20 +348,20 @@ overflow: "hidden",
       margin: "auto",
     }}
   >
-    {[1,2,3,4,5,6,7,8,9,10,11,12].map((item) => (
-      <img
-        key={item}
-        src={`https://picsum.photos/500/350?random=${item}`}
-        alt="Gallery"
-        style={{
-          width: "100%",
-          height: "250px",
-          objectFit: "cover",
-          borderRadius: "15px",
-          boxShadow: "0 5px 15px rgba(0,0,0,0.15)",
-        }}
-      />
-    ))}
+{galleryImages.map((img, index) => (
+  <img
+    key={index}
+    src={img}
+    alt={`Installation ${index + 1}`}
+    style={{
+      width: "100%",
+      height: "250px",
+      objectFit: "cover",
+      borderRadius: "15px",
+      boxShadow: "0 5px 15px rgba(0,0,0,0.15)",
+    }}
+  />
+))}
   </div>
 </section>
 
