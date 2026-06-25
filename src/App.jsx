@@ -648,7 +648,7 @@ overflow: "hidden",
     margin: "auto",
   }}
 >
-  {reviews.map((review) => (
+{reviews.slice(0, 6).map((review) => (
     <div key={review.id} style={serviceCard}>
       <h3>{review.name}</h3>
 
