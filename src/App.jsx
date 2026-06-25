@@ -1,4 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import {
+  doc,
+  getDoc,
+  collection,
+  addDoc,
+  getDocs,
+} from "firebase/firestore";
+import { db } from "./firebase";
 const galleryImages = [
   "/gallery/1.jpg",
   "/gallery/2.jpg",
@@ -14,10 +22,90 @@ const galleryImages = [
   "/gallery/12.jpg",
 ];
 export default function App() {
+  const [phone, setPhone] = useState("");
+const [whatsapp, setWhatsapp] = useState("");
+const [name, setName] = useState("");
+const [mobile, setMobile] = useState("");
+const [email, setEmail] = useState("");
+const [requirement, setRequirement] = useState("");
+const [reviews, setReviews] = useState([]);
+const [reviewName, setReviewName] = useState("");
+const [rating, setRating] = useState("5");
+const [reviewMessage, setReviewMessage] = useState("");
+const handleReviewSubmit = async () => {
+  try {
+    await addDoc(collection(db, "reviews"), {
+      name: reviewName,
+      rating: Number(rating),
+      message: reviewMessage,
+      createdAt: new Date(),
+    });
+
+    alert("Review Submitted Successfully");
+
+    setReviewName("");
+    setRating("5");
+    setReviewMessage("");
+  } catch (error) {
+    console.error(error);
+    alert("Error submitting review");
+  }
+};
+const handleSubmit = async () => {
+  try {
+    await addDoc(collection(db, "inquiries"), {
+      name,
+      mobile,
+      email,
+      requirement,
+      createdAt: new Date(),
+    });
+
+    alert("Inquiry Submitted Successfully");
+
+    setName("");
+    setMobile("");
+    setEmail("");
+    setRequirement("");
+  } catch (error) {
+    console.error(error);
+    alert("Error submitting inquiry");
+  }
+};
   useEffect(() => {
     document.documentElement.style.scrollBehavior = "smooth";
   }, []);
+  useEffect(() => {
+  const loadContact = async () => {
+    const docRef = doc(db, "settings", "contact");
+    const docSnap = await getDoc(docRef);
 
+    if (docSnap.exists()) {
+      setPhone(docSnap.data().phone);
+      setWhatsapp(docSnap.data().whatsapp);
+    }
+  };
+
+  loadContact();
+}, []);
+useEffect(() => {
+  const fetchReviews = async () => {
+    try {
+      const snapshot = await getDocs(collection(db, "reviews"));
+
+      const data = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+
+      setReviews(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  fetchReviews();
+}, []);
   const services = [
     "TV Wall Mount Installation",
     "Interactive Flat Panel Installation",
@@ -496,6 +584,51 @@ overflow: "hidden",
     textAlign: "center",
   }}
 >
+  <h3 style={{ marginBottom: "20px" }}>Leave a Review</h3>
+
+<input
+  type="text"
+  placeholder="Your Name"
+  value={reviewName}
+  onChange={(e) => setReviewName(e.target.value)}
+  style={inputStyle}
+/>
+
+<select
+  value={rating}
+  onChange={(e) => setRating(e.target.value)}
+  style={inputStyle}
+>
+  <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+  <option value="4">⭐⭐⭐⭐ (4)</option>
+  <option value="3">⭐⭐⭐ (3)</option>
+  <option value="2">⭐⭐ (2)</option>
+  <option value="1">⭐ (1)</option>
+</select>
+
+<textarea
+  placeholder="Write your review"
+  rows="4"
+  value={reviewMessage}
+  onChange={(e) => setReviewMessage(e.target.value)}
+  style={inputStyle}
+/>
+
+<button
+  onClick={handleReviewSubmit}
+  style={{
+    background: "#08142d",
+    color: "white",
+    border: "none",
+    padding: "15px",
+    borderRadius: "10px",
+    fontSize: "18px",
+    cursor: "pointer",
+    marginTop: "10px",
+  }}
+>
+  Submit Review 
+</button>
   <h2
     style={{
       fontSize: "42px",
@@ -506,33 +639,27 @@ overflow: "hidden",
     What Our Clients Say
   </h2>
 
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
-      gap: "25px",
-      maxWidth: "1200px",
-      margin: "auto",
-    }}
-  >
-    <div style={serviceCard}>
-      ⭐⭐⭐⭐⭐
-      <p>"Excellent TV installation service. Very professional team."</p>
-      <strong>- School Project, Delhi</strong>
-    </div>
+<div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
+    gap: "25px",
+    maxWidth: "1200px",
+    margin: "auto",
+  }}
+>
+  {reviews.map((review) => (
+    <div key={review.id} style={serviceCard}>
+      <h3>{review.name}</h3>
 
-    <div style={serviceCard}>
-      ⭐⭐⭐⭐⭐
-      <p>"Interactive panel installation completed perfectly."</p>
-      <strong>- Corporate Office, Noida</strong>
-    </div>
+      <p style={{ color: "#f5b301" }}>
+        {"⭐".repeat(review.rating || 5)}
+      </p>
 
-    <div style={serviceCard}>
-      ⭐⭐⭐⭐⭐
-      <p>"Fast installation and proper cable management."</p>
-      <strong>- Client, Bengaluru</strong>
+      <p>"{review.message}"</p>
     </div>
-  </div>
+  ))}
+</div>
 </section>
       {/* FAQ Section */}
 <section
@@ -646,47 +773,56 @@ overflow: "hidden",
         gap: "15px",
       }}
     >
-      <input
-        type="text"
-        placeholder="Your Name"
-        style={inputStyle}
-      />
+<input
+  type="text"
+  placeholder="Your Name"
+  value={name}
+  onChange={(e) => setName(e.target.value)}
+  style={inputStyle}
+/>
 
       <input
-        type="tel"
-        placeholder="Phone Number"
-        style={inputStyle}
-      />
+  type="tel"
+  placeholder="Phone Number"
+  value={mobile}
+  onChange={(e) => setMobile(e.target.value)}
+  style={inputStyle}
+/>
 
       <input
-        type="email"
-        placeholder="Email Address"
-        style={inputStyle}
-      />
+  type="email"
+  placeholder="Email Address"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  style={inputStyle}
+/>
 
       <textarea
-        placeholder="Your Requirement"
-        rows="5"
-        style={inputStyle}
-      ></textarea>
+  placeholder="Your Requirement"
+  rows="5"
+  value={requirement}
+  onChange={(e) => setRequirement(e.target.value)}
+  style={inputStyle}
+></textarea>
 
-      <button
-        style={{
-          background: "#08142d",
-          color: "white",
-          border: "none",
-          padding: "15px",
-          borderRadius: "10px",
-          fontSize: "18px",
-          cursor: "pointer",
-        }}
-      >
-        Submit Inquiry
-      </button>
+<button
+  onClick={handleSubmit}
+  style={{
+    background: "#08142d",
+    color: "white",
+    border: "none",
+    padding: "15px",
+    borderRadius: "10px",
+    fontSize: "18px",
+    cursor: "pointer",
+  }}
+>
+  Submit Inquiry
+</button>
     </div>
 
     <div style={{ marginTop: "40px" }}>
-      <h3>📞 8532066293</h3>
+  <h3>📞 {phone}</h3>
       <h3>📧 installationavtech@gmail.com</h3>
       <h3>🌍 Service Available Across India</h3>
     </div>
